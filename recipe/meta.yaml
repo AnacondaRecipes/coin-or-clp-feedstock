@@ -47,8 +47,9 @@ test:
     - echo ? | clp
 
 about:
-  home: https://projects.coin-or.org/Clp
+  home: https://github.com/coin-or/Clp
   dev_url: https://github.com/coin-or/Clp
+  doc_url: https://coin-or.github.io/Clp/Doxygen/
   license: EPL-2.0
   license_family: OTHER
   license_file: LICENSE
