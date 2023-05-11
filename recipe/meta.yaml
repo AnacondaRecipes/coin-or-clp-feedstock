@@ -20,7 +20,7 @@ build:
 
 requirements:
   build:
-    - gnuconfig  # [unix]
+    - gnuconfig 2021.05.24 # [unix]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ compiler('fortran') }}
