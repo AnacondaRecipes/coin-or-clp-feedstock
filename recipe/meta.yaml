@@ -14,7 +14,6 @@ source:
 
 build:
   number: 0
-  skip: true  # [win]
   run_exports:
     - {{ pin_subpackage(name, min_pin='x.x', max_pin='x.x') }}
 
@@ -41,10 +40,10 @@ requirements:
 
 test:
   commands:
-    - test -f $PREFIX/lib/libClp${SHLIB_EXT}
-    - test -f $PREFIX/lib/libOsiClp${SHLIB_EXT}
-    - test -f $PREFIX/include/coin/ClpGubDynamicMatrix.hpp
-    - test -f $PREFIX/include/coin/OsiClpSolverInterface.hpp
+    - test -f $PREFIX/lib/libClp${SHLIB_EXT}  # [unix]
+    - test -f $PREFIX/lib/libOsiClp${SHLIB_EXT}  # [unix]
+    - test -f $PREFIX/include/coin/ClpGubDynamicMatrix.hpp  # [unix]
+    - test -f $PREFIX/include/coin/OsiClpSolverInterface.hpp  # [unix]
     - echo ? | clp
 
 about:
