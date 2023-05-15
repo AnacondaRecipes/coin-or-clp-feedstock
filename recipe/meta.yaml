@@ -33,6 +33,9 @@ requirements:
     - ncurses 6.2
   run:
     - ncurses
+    - libopenblas                     # [blas_impl == "openblas"]
+    # To stop the compiler pulling in an openmp implementation itself
+    - _openmp_mutex                   # [linux]
   run_constrained:
     - coincbc * *_metapackage
 
