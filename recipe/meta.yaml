@@ -8,10 +8,10 @@ package:
 source:
   url: https://github.com/coin-or/Clp/archive/releases/{{ version }}.tar.gz
   sha256: c4c2c0e014220ce8b6294f3be0f3a595a37bef58a14bf9bac406016e9e73b0f5
-  skip: true  # [blas_impl != "openblas"]
 
 build:
   number: 0
+  skip: true  # [blas_impl != "openblas"]
   run_exports:
     - {{ pin_subpackage(name, min_pin='x.x', max_pin='x.x') }}
 
